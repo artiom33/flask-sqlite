@@ -2,7 +2,7 @@
 This is a simple python Flask application that serves data frame from SQLite database.
 
 ## Description
-This application fetches iris datasetfrom github, creates a local SQLite3 database and saves the data from web,  then serves it on `/` endpoint.
+This application fetches iris datasetfrom github, creates a local SQLite3 database and saves the data from web, then serves it on `/` and `/n` endpoints (the latter controls the number of entries in the output).
 
 ## Setup
 Install the required packages:
