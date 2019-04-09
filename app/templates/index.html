@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Flask-Sqlite3 Demo</title>
+		
+		<!-- css from w3 site for the table -->
+        <style>
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p>Iris dataset </p>
+        <table>
+            <tr>
+                <th>Sepal Length</th>
+                <th>Sepal Width</th>
+                <th>Petal Length</th>
+                <th>Petal Width</th>
+                <th>Species</th>
+            </tr>
+			<!-- loop through the users we passed in the app. -->
+            {% for user in users %}
+                <tr>
+                    <td>{{ user[0] }}</td>
+                    <td>{{ user[1] }}</td>
+                    <td>{{ user[2] }}</td>
+                    <td>{{ user[3] }}</td>
+                    <td>{{ user[4] }}</td>
+                  </tr>
+            {% endfor %}
+        </table>
+    </body>
+
