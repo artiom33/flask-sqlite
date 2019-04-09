@@ -1,6 +1,7 @@
 from flask import render_template
 from app import app, db
 
+
 @app.route('/', defaults={'entries': 5})
 @app.route('/<int:entries>')
 def index(entries):

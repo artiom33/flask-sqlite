@@ -15,13 +15,12 @@ if not os.path.exists(app.config["DATABASE_NAME"]):
     #             "petal_length REAL, petal_width REAL, species TEXT);")
     # conn.commit()
     iris_df = pd.read_csv(app.config["DATA_URL"])
-    iris_df.to_sql('iris', conn, dtype={
-    'sepal_length':'REAL',
-    'sepal_width':'REAL',
-    'petal_length':'REAL',
-    'petal_width':'REAL',
-	'species':'VARCHAR(255)'})
+    iris_df.to_sql('iris', conn, dtype={'sepal_length': 'REAL',
+                                        'sepal_width': 'REAL',
+                                        'petal_length': 'REAL',
+                                        'petal_width': 'REAL',
+                                        'species': 'VARCHAR(255)'})
 
 db = SQLAlchemy(app)
 
-from app import routes
+from app import routes  # noqa
