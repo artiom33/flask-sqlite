@@ -1,5 +1,8 @@
+"""
+This script contains endpoints definitions
+"""
 from flask import render_template
-from app import app, db
+from . import app, db
 
 
 @app.route('/', defaults={'entries': 5})

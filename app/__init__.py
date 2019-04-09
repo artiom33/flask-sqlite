@@ -1,9 +1,13 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from config import Config
+"""
+Flask app starting routines
+"""
 import os
 import sqlite3
 import pandas as pd
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+from config import Config
+
 
 app = Flask(__name__)
 app.config.from_object(Config)

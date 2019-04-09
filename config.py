@@ -1,13 +1,16 @@
+"""
+This script contains flask app settings
+"""
 import os
-basedir = os.path.abspath(os.path.dirname(__file__))
-database_name = "app.db"
+BASEDIR = os.path.abspath(os.path.dirname(__file__))
+DBNAME = "app.db"
 
 
 class Config(object):
-    DATABASE_NAME = database_name
+    DATABASE_NAME = DBNAME
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
-        'sqlite:///' + os.path.join(basedir, database_name)
+        'sqlite:///' + os.path.join(BASEDIR, DBNAME)
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     DEBUG = True
     DATA_URL = 'https://gist.githubusercontent.com/curran/a08a1080b88344b0' \

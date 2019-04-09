@@ -1,8 +1,14 @@
+"""
+Main unittest script
+"""
 import unittest
 from app import app
 
 
 class SimpleRequestTest(unittest.TestCase):
+    """
+    This class is used for request based unit tests
+    """
     def setUp(self):
         app.testing = True
         self.app = app.test_client()
